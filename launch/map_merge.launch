@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <!-- <rosparam file="$(find wheeltec_experiment)/params/map_merge/robot_pose.yaml" command="load"/> -->
+
+  <node name="map_merge" pkg="multirobot_map_merge" type="map_merge" >
+
+    <param name="robot_namespace" value="robot_" />
+    <param name="known_init_poses" value="true" />
+    <param name="merged_map_topic" value="/map" />
+    <param name="world_frame" value="world" />
+    <param name="merging_rate" value="4.0" />
+
+  </node>
+
+</launch>
