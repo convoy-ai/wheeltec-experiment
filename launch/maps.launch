@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<launch>
+
+  <rosparam file="$(find wheeltec_experiment)/params/map_merge/robot_pose.yaml" command="load"/>
+
+  <group ns="robot_1">
+    <node name="map" pkg="map_server" type="map_server" args="$(find wheeltec_experiment)/maps/lab_partial_1.yaml" >
+        <param name="frame_id" value="robot_1/map" />
+    </node>
+  </group>
+
+  <group ns="robot_2">
+    <node name="map" pkg="map_server" type="map_server" args="$(find wheeltec_experiment)/maps/lab_partial_2.yaml" >
+        <param name="frame_id" value="robot_2/map" />
+    </node>
+  </group>
+
+  <group ns="robot_3">
+    <node name="map" pkg="map_server" type="map_server" args="$(find wheeltec_experiment)/maps/lab_partial_3.yaml" >
+        <param name="frame_id" value="robot_3/map" />
+    </node>
+  </group>
+
+</launch>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+  
+  <node name="map_merge" pkg="map_merge" type="map_merge.py" >
+
+    <param name="world_map_topic" value="/map" />
+    <param name="world_map_frame" value="world" />
+    <param name="rate" value="0.5" />
+
+  </node>
+
+</launch>
