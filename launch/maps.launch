@@ -5,15 +5,19 @@
 
   <group ns="robot_1">
     <node name="map" pkg="map_server" type="map_server" args="$(find wheeltec_experiment)/maps/lab_partial_1.yaml" >
-    <!-- <node name="map" pkg="map_server" type="map_server" args="$(find wheeltec_experiment)/maps/gmapping_maps/2011-08-09-12-22-52.yaml" > -->
-        <param name="frame_id" value="robot_1" />
+        <param name="frame_id" value="robot_1/map" />
     </node>
   </group>
 
   <group ns="robot_2">
     <node name="map" pkg="map_server" type="map_server" args="$(find wheeltec_experiment)/maps/lab_partial_2.yaml" >
-    <!-- <node name="map" pkg="map_server" type="map_server" args="$(find wheeltec_experiment)/maps/gmapping_maps/2012-01-28-11-12-01.yaml" > -->
-        <param name="frame_id" value="robot_2" />
+        <param name="frame_id" value="robot_2/map" />
+    </node>
+  </group>
+
+  <group ns="robot_3">
+    <node name="map" pkg="map_server" type="map_server" args="$(find wheeltec_experiment)/maps/lab_partial_3.yaml" >
+        <param name="frame_id" value="robot_3/map" />
     </node>
   </group>
 
