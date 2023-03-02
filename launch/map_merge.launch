@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <launch>
+
+  <rosparam file="$(find wheeltec_experiment)/params/map_merge/lab_robot_pose.yaml" command="load"/>
   
   <node name="map_merge" pkg="map_merge" type="map_merge.py" output="screen">
 
-    <param name="world_map_topic" value="/map" />
-    <param name="world_map_frame" value="world" />
+    <param name="robot_count" value="2" />
     <param name="rate" value="0.5" />
 
   </node>
