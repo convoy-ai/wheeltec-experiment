@@ -1,0 +1,13 @@
+robot_1:
+  map_merge:
+    init_pose_x: -1.596
+    init_pose_y: -1.264
+    init_pose_z: 0.0
+    init_pose_yaw: 0.0
+    
+robot_2:
+  map_merge:
+    init_pose_x: 1.334
+    init_pose_y: 1.865
+    init_pose_z: 0.0
+    init_pose_yaw: 0.0
