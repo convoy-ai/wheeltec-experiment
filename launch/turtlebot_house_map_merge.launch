@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<launch>
+
+  <arg name="subprocess_count" default="1" />
+
+  <rosparam file="$(find wheeltec_experiment)/params/map_merge/turtlebot_house_robot_pose.yaml" command="load"/>
+  
+  <node name="map_merge" pkg="map_merge" type="map_merge.py" output="screen">
+
+    <param name="robot_count" value="3" />
+    <param name="rate" value="10" />
+    <param name="merge_subprocess_count" value="$(arg subprocess_count)" />
+
+  </node>
+
+</launch>
